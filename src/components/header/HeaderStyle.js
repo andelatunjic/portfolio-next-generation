@@ -2,22 +2,11 @@ import { styled } from "styled-components";
 import { colors, breakpoints } from "../../utils/theme";
 import { NavLink } from "react-router-dom";
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.header`
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: white;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards; // Add fade-in animation
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 `;
 
 export const HeaderInner = styled.div`
@@ -44,7 +33,7 @@ export const HeaderInner = styled.div`
 
 export const Logo = styled.h1`
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   transition: opacity 0.4s ease-in-out;
   cursor: pointer;
 

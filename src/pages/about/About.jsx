@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AboutIntro from "../../components/aboutIntro/AboutIntro";
+import Highlights from "../../components/highlights/Highlights";
+import Section from "../../components/section/Section";
 
 const About = () => {
-  return <div>About</div>;
+  useEffect(() => {
+    document.title = "About | Anđela Tunjić";
+  }, []);
+
+  return (
+    <>
+      <Section>
+        <AboutIntro />
+      </Section>
+      <Section>
+        <Highlights />
+      </Section>
+    </>
+  );
 };
 
 export default About;
