@@ -5,8 +5,19 @@ import { NavLink } from "react-router-dom";
 export const HeaderWrapper = styled.div`
   position: sticky;
   top: 0;
-  z-index: 100; 
+  z-index: 100;
   background-color: white;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; // Add fade-in animation
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 export const HeaderInner = styled.div`

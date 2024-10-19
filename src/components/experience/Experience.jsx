@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "../section/Section";
+import ExperienceCard from "../experienceCard/ExperienceCard";
 import {
   ExperienceWrapper,
   ExperienceInner,
@@ -7,14 +8,8 @@ import {
   Title,
   Subtitle,
   Grid,
-  ExperienceCardWrapper,
-  ExperienceCardFigure,
-  ExperienceCardImage,
-  ExperienceCardTitle,
-  ExperienceCardSubtitle,
-  ExperienceCardDescription,
 } from "./ExperienceStyle";
-import ProjectImage from "../../assets/project.png";
+import experienceData from "../../data/experience";
 
 const Experience = () => {
   return (
@@ -23,97 +18,21 @@ const Experience = () => {
         <ExperienceInner>
           <TextWrapper>
             <Title>Professional Experience</Title>
-            <Subtitle>Password available upon request</Subtitle>
+            <Subtitle>
+              Some minigful text or description. Some more text and bla bla
+              words
+            </Subtitle>
           </TextWrapper>
           <Grid>
-            <ExperienceCardWrapper>
-              <ExperienceCardFigure>
-                <ExperienceCardImage src={ProjectImage} />
-              </ExperienceCardFigure>
-              <ExperienceCardTitle>Duolingo</ExperienceCardTitle>
-              <ExperienceCardSubtitle>Product Designer</ExperienceCardSubtitle>
-              <ExperienceCardDescription>
-                Launched multiple designs that enhanced Super Duolingo's
-                subscription metrics.
-              </ExperienceCardDescription>
-            </ExperienceCardWrapper>
-            <ExperienceCardWrapper>
-              <ExperienceCardFigure>
-                <ExperienceCardImage src={ProjectImage} />
-              </ExperienceCardFigure>
-              <ExperienceCardTitle>Duolingo 2</ExperienceCardTitle>
-              <ExperienceCardSubtitle>Product Designer</ExperienceCardSubtitle>
-              <ExperienceCardDescription>
-                Launched multiple designs that enhanced Super Duolingo's
-                subscription metrics.
-              </ExperienceCardDescription>
-            </ExperienceCardWrapper>
-            <ExperienceCardWrapper>
-              <ExperienceCardFigure>
-                <ExperienceCardImage src={ProjectImage} />
-              </ExperienceCardFigure>
-              <ExperienceCardTitle>Duolingo 3</ExperienceCardTitle>
-              <ExperienceCardSubtitle>Product Designer</ExperienceCardSubtitle>
-              <ExperienceCardDescription>
-                Launched multiple designs that enhanced Super Duolingo's
-                subscription metrics.
-              </ExperienceCardDescription>
-            </ExperienceCardWrapper>
-            <ExperienceCardWrapper>
-              <ExperienceCardFigure>
-                <ExperienceCardImage src={ProjectImage} />
-              </ExperienceCardFigure>
-              <ExperienceCardTitle>Duolingo 3</ExperienceCardTitle>
-              <ExperienceCardSubtitle>Product Designer</ExperienceCardSubtitle>
-              <ExperienceCardDescription>
-                Launched multiple designs that enhanced Super Duolingo's
-                subscription metrics.
-              </ExperienceCardDescription>
-            </ExperienceCardWrapper>
-            <ExperienceCardWrapper>
-              <ExperienceCardFigure>
-                <ExperienceCardImage src={ProjectImage} />
-              </ExperienceCardFigure>
-              <ExperienceCardTitle>Duolingo 3</ExperienceCardTitle>
-              <ExperienceCardSubtitle>Product Designer</ExperienceCardSubtitle>
-              <ExperienceCardDescription>
-                Launched multiple designs that enhanced Super Duolingo's
-                subscription metrics.
-              </ExperienceCardDescription>
-            </ExperienceCardWrapper>
-            <ExperienceCardWrapper>
-              <ExperienceCardFigure>
-                <ExperienceCardImage src={ProjectImage} />
-              </ExperienceCardFigure>
-              <ExperienceCardTitle>Duolingo 3</ExperienceCardTitle>
-              <ExperienceCardSubtitle>Product Designer</ExperienceCardSubtitle>
-              <ExperienceCardDescription>
-                Launched multiple designs that enhanced Super Duolingo's
-                subscription metrics.
-              </ExperienceCardDescription>
-            </ExperienceCardWrapper>
-            <ExperienceCardWrapper>
-              <ExperienceCardFigure>
-                <ExperienceCardImage src={ProjectImage} />
-              </ExperienceCardFigure>
-              <ExperienceCardTitle>Duolingo 3</ExperienceCardTitle>
-              <ExperienceCardSubtitle>Product Designer</ExperienceCardSubtitle>
-              <ExperienceCardDescription>
-                Launched multiple designs that enhanced Super Duolingo's
-                subscription metrics.
-              </ExperienceCardDescription>
-            </ExperienceCardWrapper>
-            <ExperienceCardWrapper>
-              <ExperienceCardFigure>
-                <ExperienceCardImage src={ProjectImage} />
-              </ExperienceCardFigure>
-              <ExperienceCardTitle>Duolingo 3</ExperienceCardTitle>
-              <ExperienceCardSubtitle>Product Designer</ExperienceCardSubtitle>
-              <ExperienceCardDescription>
-                Launched multiple designs that enhanced Super Duolingo's
-                subscription metrics.
-              </ExperienceCardDescription>
-            </ExperienceCardWrapper>
+            {experienceData.map((experience, index) => (
+              <ExperienceCard
+                key={index}
+                title={experience.title}
+                role={experience.role}
+                description={experience.description}
+                img={experience.img}
+              />
+            ))}
           </Grid>
         </ExperienceInner>
       </ExperienceWrapper>

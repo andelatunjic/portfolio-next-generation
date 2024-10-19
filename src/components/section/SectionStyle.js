@@ -21,11 +21,11 @@ export const SectionInner = styled.div`
 
   @media screen and (${breakpoints.desktopSmall}) {
     padding: 0 40px;
-    max-width: 924px;
+    max-width: 1024px;
     margin: 0 auto;
   }
 
   @media screen and (${breakpoints.desktop}) {
-    max-width: 924px;
+    max-width: 1024px;
   }
 `;
