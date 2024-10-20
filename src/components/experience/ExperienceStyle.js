@@ -7,9 +7,7 @@ export const ExperienceInner = styled.div`
   padding: 32px 0;
 `;
 
-export const TextWrapper = styled.div`
-
-`;
+export const TextWrapper = styled.div``;
 
 export const Title = styled.h2`
   line-height: 38px;

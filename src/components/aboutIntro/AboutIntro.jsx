@@ -19,16 +19,19 @@ const AboutIntro = () => {
             Get to know more <AccentText>about Anđela</AccentText>
           </Title>
           <Description>
-            yada yadaada yada yada yada yaduja yada yada yada yada yada yada
-            yaddvrgn ngiern g ada yada yjuyada yada yada yada yada yayada yada
-            juz juz yada yada yada y juj da yada yada yada yada yada <br />
+            I recently graduated from the Carnegie Mellon University Master of
+            Entertainment Technology program and joined Duolingo as a product
+            designer. <br />
             <br />
-            yadada yada yada yada yada yada yada yada yada yada yada yada yada
-            ya yada yagniuh gnghgi3 gnorhngn da yajuyja yada yada ya jua yada
-            yada yada yada yada yadjuj ada yada yada yada yada <br /> <br />
-            yada yada yada yada yada yada yada yada yada yada yada yada yada
-            yada yada yadgiwbhg bgiwbgi iwgibgi bi igi a yada yada yada yada
-            yadaada ju yada yada yja yada yada yada yada yada yada
+            I am a highly motivated and enthusiastic Product Designer with a
+            strong passion for 3D and AR/VR design. I enjoy combining my
+            artistic background with my technical skills to create innovative
+            and creative solutions. <br /> <br />I have experience developing
+            visionary concepts, conducting user research, and establishing
+            product frameworks through the use of animated and interactive
+            prototypes. Possessing a positive attitude and a growth-oriented
+            mindset, I am constantly seeking opportunities to expand my
+            knowledge and skills as a designer.
           </Description>
         </TextWrapper>
         <ImageWrapper>

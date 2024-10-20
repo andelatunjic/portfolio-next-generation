@@ -6,6 +6,7 @@ export const HighWrapper = styled.div``;
 export const HighInner = styled.div``;
 
 export const Grid = styled.div`
+  margin-bottom: 32px;
   display: grid;
   gap: 16px;
   padding: 32px 0;
@@ -22,6 +23,11 @@ export const Grid = styled.div`
 
 export const HighCard = styled.div``;
 
-export const Title = styled.h3``;
+export const Title = styled.h3`
+  font-weight: 500;
+  margin-bottom: 14px;
+`;
 
-export const Item = styled.p``;
+export const Item = styled.p`
+  line-height: 22px;
+`;
