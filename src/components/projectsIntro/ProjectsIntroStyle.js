@@ -32,7 +32,6 @@ export const Grid = styled.div`
   margin-bottom: 32px;
   display: grid;
   gap: 8px;
-  padding: 32px 0;
 
   @media screen and (${breakpoints.tabletSmall}) {
     grid-template-columns: repeat(2, 1fr);

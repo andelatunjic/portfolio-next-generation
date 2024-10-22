@@ -9,15 +9,15 @@ import {
   Image,
 } from "./HobbyStyle";
 
-// assets
-import Alex from "../../assets/alex.jpg";
-import Amazona from "../../assets/amazona.jpg";
-import Roz from "../../assets/roz.jpg";
-import Kakadu from "../../assets/kakadu.jpg";
-import Nimfa from "../../assets/nimfa.jpg";
-import Nez from "../../assets/nez.jpg";
-import Lory from "../../assets/lory.jpg";
-import Rozen from "../../assets/rozen.jpg";
+// Components
+import Badges from "../../assets/images/badges.jpg";
+import Contact from "../../assets/images/contact.jpg";
+import Experience from "../../assets/images/experience.jpg";
+import Leading from "../../assets/images/leading.jpg";
+import Skill from "../../assets/images/skill-card.jpg";
+import Project from "../../assets/images/project-portfolio.jpg";
+import Graphs from "../../assets/images/graphs.jpg";
+import Sushi from "../../assets/images/sushi.jpg";
 
 const Hobby = () => {
   return (
@@ -26,19 +26,18 @@ const Hobby = () => {
         <Title>📷 Aside from programming...</Title>
         <ImageGridRow>
           <ImageGridColumn>
-            <Image src={Alex} />
-            <Image src={Amazona} />
-            <Image src={Rozen} />
+            <Image src={Sushi} />
+            <Image src={Experience} />
+            <Image src={Contact} />
           </ImageGridColumn>
           <ImageGridColumn>
-            <Image src={Roz} />
-            <Image src={Kakadu} />
-            <Image src={Alex} />
+            <Image src={Leading} />
+            <Image src={Badges} />
+            <Image src={Graphs} />
           </ImageGridColumn>
           <ImageGridColumn>
-            <Image src={Nimfa} />
-            <Image src={Nez} />
-            <Image src={Lory} />
+            <Image src={Project} />
+            <Image src={Skill} />
           </ImageGridColumn>
         </ImageGridRow>
       </HobbyInner>

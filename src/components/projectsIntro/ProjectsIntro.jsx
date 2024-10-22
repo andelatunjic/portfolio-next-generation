@@ -10,16 +10,12 @@ import {
   Image,
   Figure,
 } from "./ProjectsIntroStyle";
+import Slideshow from "../slideshow/Slideshow";
 
-// assets
-import Alex from "../../assets/alex.jpg";
-import Amazona from "../../assets/amazona.jpg";
-import Roz from "../../assets/roz.jpg";
-import Kakadu from "../../assets/kakadu.jpg";
-import Nimfa from "../../assets/nimfa.jpg";
-import Nez from "../../assets/nez.jpg";
-import Lory from "../../assets/lory.jpg";
-import Rozen from "../../assets/rozen.jpg";
+import Culturio from "../../assets/cover-culturio.png";
+import Inventory from "../../assets/cover-inventory.png";
+import Portfolio from "../../assets/cover-portfolio.png";
+import Speck from "../../assets/cover-speck.png";
 
 const ProjectsIntro = () => {
   return (
@@ -37,30 +33,29 @@ const ProjectsIntro = () => {
         </TextWrapper>
         <Grid>
           <Figure>
-            <Image src={Alex} />
+            <Image src={Portfolio} />
           </Figure>
           <Figure>
-            <Image src={Amazona} />
+            <Image src={Speck} />
           </Figure>
           <Figure>
-            <Image src={Rozen} />
+            <Image src={Culturio} />
           </Figure>
           <Figure>
-            <Image src={Roz} />
-          </Figure>
-          <Figure>
-            <Image src={Kakadu} />
-          </Figure>
-          <Figure>
-            <Image src={Nimfa} />
-          </Figure>
-          <Figure>
-            <Image src={Nez} />
-          </Figure>
-          <Figure>
-            <Image src={Lory} />
+            <Image src={Inventory} />
           </Figure>
         </Grid>
+        <TextWrapper>
+          <Title>
+            My passion, <AccentText>visual explorations</AccentText>
+          </Title>
+          <Description>
+            As a multi-disciplinary designer, I enjoy exploring various ways to
+            visualize my creativity. Hover over to play my daily UI work, 3D
+            motion graphics, and graphic designs.
+          </Description>
+        </TextWrapper>
+        <Slideshow />
       </ProjectsInner>
     </ProjectsWrapper>
   );

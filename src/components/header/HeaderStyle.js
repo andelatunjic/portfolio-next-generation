@@ -3,9 +3,6 @@ import { colors, breakpoints } from "../../utils/theme";
 import { NavLink } from "react-router-dom";
 
 export const HeaderWrapper = styled.header`
-  position: sticky;
-  top: 0;
-  z-index: 100;
   background-color: white;
 `;
 

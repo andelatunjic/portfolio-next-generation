@@ -4,7 +4,7 @@ import Projects from "./pages/projects/Projects";
 import About from "./pages/about/About";
 import Header from "./components/header/Header";
 import { Route, Routes } from "react-router-dom";
-import Footer from "./footer/Footer";
+import Footer from "./components/footer/Footer";
 import AnimationLayout from "./components/animationLayout/AnimationLayout";
 
 const App = () => {
