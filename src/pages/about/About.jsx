@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AboutIntro from "../../components/aboutIntro/AboutIntro";
-import Highlights from "../../components/highlights/Highlights";
 import Section from "../../components/section/Section";
+import Skills from "../../components/skills/Skills";
 
 const About = () => {
   useEffect(() => {
@@ -14,7 +14,7 @@ const About = () => {
         <AboutIntro />
       </Section>
       <Section>
-        <Highlights />
+        <Skills />
       </Section>
     </>
   );
