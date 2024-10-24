@@ -6,7 +6,7 @@ export const ProjectsWrapper = styled.div``;
 export const ProjectsInner = styled.div``;
 
 export const TextWrapper = styled.div`
-  max-width: 400px;
+  max-width: 600px;
   margin-bottom: 24px;
 `;
 

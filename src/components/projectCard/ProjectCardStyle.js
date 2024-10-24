@@ -64,4 +64,11 @@ export const ProjectCardSubtitle = styled.p`
 
 export const ProjectCardDescription = styled.p`
   line-height: 22px;
+  margin-bottom: 4px;
+`;
+
+export const Tags = styled.div`
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
 `;

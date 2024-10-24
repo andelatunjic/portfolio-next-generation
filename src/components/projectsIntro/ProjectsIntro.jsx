@@ -35,6 +35,7 @@ const ProjectsIntro = () => {
               description={project.description}
               img={project.img}
               gallery={project.gallery}
+              tags={project.tags}
             />
           ))}
         </Grid>
