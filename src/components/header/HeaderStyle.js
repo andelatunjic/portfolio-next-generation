@@ -64,3 +64,16 @@ export const NaviagationLink = styled(NavLink)`
     opacity: 1;
   }
 `;
+
+export const ResumeLink = styled.a`
+  list-style: none;
+  font-size: 16px;
+  padding: 32px 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease-out;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+`;

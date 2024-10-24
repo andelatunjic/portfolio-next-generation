@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import ProjectCard from "../projectCard/ProjectCard";
 import {
   ProjectsWrapper,
   ProjectsInner,
@@ -7,15 +9,8 @@ import {
   AccentText,
   Description,
   Grid,
-  Image,
-  Figure,
 } from "./ProjectsIntroStyle";
-import Slideshow from "../slideshow/Slideshow";
-
-import Culturio from "../../assets/cover-culturio.png";
-import Inventory from "../../assets/cover-inventory.png";
-import Portfolio from "../../assets/cover-portfolio.png";
-import Speck from "../../assets/cover-speck.png";
+import projectsData from "../../data/projects";
 
 const ProjectsIntro = () => {
   return (
@@ -32,30 +27,17 @@ const ProjectsIntro = () => {
           </Description>
         </TextWrapper>
         <Grid>
-          <Figure>
-            <Image src={Portfolio} />
-          </Figure>
-          <Figure>
-            <Image src={Speck} />
-          </Figure>
-          <Figure>
-            <Image src={Culturio} />
-          </Figure>
-          <Figure>
-            <Image src={Inventory} />
-          </Figure>
+          {projectsData.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              role={project.role}
+              description={project.description}
+              img={project.img}
+              gallery={project.gallery}
+            />
+          ))}
         </Grid>
-        <TextWrapper>
-          <Title>
-            My passion, <AccentText>visual explorations</AccentText>
-          </Title>
-          <Description>
-            As a multi-disciplinary designer, I enjoy exploring various ways to
-            visualize my creativity. Hover over to play my daily UI work, 3D
-            motion graphics, and graphic designs.
-          </Description>
-        </TextWrapper>
-        <Slideshow />
       </ProjectsInner>
     </ProjectsWrapper>
   );

@@ -29,9 +29,9 @@ export const Description = styled.p`
 `;
 
 export const Grid = styled.div`
-  margin-bottom: 32px;
   display: grid;
-  gap: 8px;
+  gap: 16px;
+  padding: 32px 0;
 
   @media screen and (${breakpoints.tabletSmall}) {
     grid-template-columns: repeat(2, 1fr);
@@ -39,7 +39,7 @@ export const Grid = styled.div`
 
   @media screen and (${breakpoints.tablet}) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 20px;
   }
 `;
 

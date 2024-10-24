@@ -8,6 +8,7 @@ import {
   NavigationList,
   NaviagationItem,
   NaviagationLink,
+  ResumeLink,
 } from "./HeaderStyle";
 
 const Header = () => {
@@ -17,11 +18,15 @@ const Header = () => {
     if (window.location.pathname === "/") {
       window.scrollTo({
         top: 0,
-        behavior: "smooth", 
+        behavior: "smooth",
       });
     } else {
       navigate("/", { replace: true });
     }
+  };
+
+  const handleResumeClick = () => {
+    window.open("../../assets/placeholder.pdf", "_blank");
   };
 
   return (
@@ -39,9 +44,9 @@ const Header = () => {
             <NaviagationItem>
               <NaviagationLink to="/about">About</NaviagationLink>
             </NaviagationItem>
-            <NaviagationItem>
-              <NaviagationLink to="/resume">Resume</NaviagationLink>
-            </NaviagationItem>
+            <ResumeLink href="/src/assets/placeholder.pdf" target="_blank">
+              Resume
+            </ResumeLink>
           </NavigationList>
         </Navigation>
       </HeaderInner>

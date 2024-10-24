@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import AboutIntro from "../../components/aboutIntro/AboutIntro";
 import Highlights from "../../components/highlights/Highlights";
-import Hobby from "../../components/hobby/Hobby";
 import Section from "../../components/section/Section";
 
 const About = () => {
@@ -16,9 +15,6 @@ const About = () => {
       </Section>
       <Section>
         <Highlights />
-      </Section>
-      <Section>
-        <Hobby />
       </Section>
     </>
   );
