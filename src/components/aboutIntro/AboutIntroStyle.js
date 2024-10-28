@@ -1,9 +1,14 @@
 import { styled } from "styled-components";
 import { breakpoints } from "../../utils/theme";
 
-export const IntroWrapper = styled.div``;
+export const IntroWrapper = styled.div`
+  padding: 64px 0;
+`;
 
-export const IntroInner = styled.div``;
+export const IntroInner = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 export const TextWrapper = styled.div`
   max-width: 500px;
@@ -27,13 +32,7 @@ export const Description = styled.p`
   line-height: 22px;
 `;
 
-export const Grid = styled.div`
-  display: grid;
-  gap: 16px;
-  padding: 32px 0;
-
-  @media screen and (${breakpoints.desktopSmall}) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
+export const Image = styled.img`
+  height: 324px;
+  object-fit: cover;
 `;

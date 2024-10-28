@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { breakpoints } from "../../utils/theme";
 
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 34px;
+const SkillsWrapper = styled.div`
+  padding: 64px 0;
 `;
+
+const SkillsInner = styled.div``;
 
 // Individual card
 const Card = styled(motion.div)`
@@ -36,12 +36,16 @@ const CardText = styled.p`
 const Grid = styled.div`
   display: grid;
   gap: 16px;
-  padding: 32px 0;
 
   @media screen and (${breakpoints.desktopSmall}) {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
+`;
+
+const Title = styled.h2`
+  line-height: 38px;
+  margin-bottom: 24px;
 `;
 
 const skillData = [
@@ -88,27 +92,32 @@ const Skills = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <Grid>
-      {skillData.map((section, index) => (
-        <Card
-          key={index}
-          ref={ref}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={slideInVariants}
-        >
-          <CardTitle>{section.title}</CardTitle>
-          {section.categories.map((category, i) => (
-            <div key={i}>
-              <CardText>
-                <strong>{category.name}</strong>
-              </CardText>
-              <CardText>{category.skills.join(", ")}</CardText>
-            </div>
+    <SkillsWrapper>
+      <SkillsInner>
+        <Title>The tools I use to build amazing apps</Title>
+        <Grid>
+          {skillData.map((section, index) => (
+            <Card
+              key={index}
+              ref={ref}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={slideInVariants}
+            >
+              <CardTitle>{section.title}</CardTitle>S
+              {section.categories.map((category, i) => (
+                <div key={i}>
+                  <CardText>
+                    <strong>{category.name}</strong>
+                  </CardText>
+                  <CardText>{category.skills.join(", ")}</CardText>
+                </div>
+              ))}
+            </Card>
           ))}
-        </Card>
-      ))}
-    </Grid>
+        </Grid>
+      </SkillsInner>
+    </SkillsWrapper>
   );
 };
 

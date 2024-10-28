@@ -3,11 +3,13 @@ import { breakpoints } from "../../utils/theme";
 
 export const ProjectsWrapper = styled.div``;
 
-export const ProjectsInner = styled.div``;
+export const ProjectsInner = styled.div`
+  margin: 64px 0;
+`;
 
 export const TextWrapper = styled.div`
   max-width: 600px;
-  margin-bottom: 24px;
+  margin-bottom: 44px;
 `;
 
 export const Title = styled.h2`
@@ -31,7 +33,6 @@ export const Description = styled.p`
 export const Grid = styled.div`
   display: grid;
   gap: 16px;
-  padding: 32px 0;
 
   @media screen and (${breakpoints.tabletSmall}) {
     grid-template-columns: repeat(2, 1fr);

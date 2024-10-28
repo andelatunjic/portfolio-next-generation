@@ -1,7 +1,9 @@
 import { styled } from "styled-components";
 import { colors, breakpoints } from "../../utils/theme";
 
-export const IntroductionWrapper = styled.div``;
+export const IntroductionWrapper = styled.div`
+  margin: 96px 0;
+`;
 
 export const IntroductionInner = styled.div`
   display: flex;
@@ -15,7 +17,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const IntroductionTitle = styled.h2`
-  line-height: 38px;
+  font-size: 38px;
 `;
 
 export const AccentText = styled.span`

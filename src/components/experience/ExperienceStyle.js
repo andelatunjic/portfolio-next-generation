@@ -4,7 +4,7 @@ import { colors, breakpoints } from "../../utils/theme";
 export const ExperienceWrapper = styled.div``;
 
 export const ExperienceInner = styled.div`
-  padding: 32px 0;
+  padding: 64px 0;
 `;
 
 export const TextWrapper = styled.div``;
@@ -23,7 +23,7 @@ export const Subtitle = styled.p`
 export const Grid = styled.div`
   display: grid;
   gap: 16px;
-  padding: 32px 0;
+  padding-top: 32px;
 
   @media screen and (${breakpoints.tabletSmall}) {
     grid-template-columns: repeat(2, 1fr);
