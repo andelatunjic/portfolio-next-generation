@@ -6,6 +6,7 @@ import {
   Title,
   AccentText,
   Description,
+  ImageWrapper,
   Image,
 } from "./AboutIntroStyle";
 
@@ -28,7 +29,15 @@ const AboutIntro = () => {
             <br />
           </Description>
         </TextWrapper>
-        <Image src="https://miro.medium.com/v2/resize:fit:1400/1*qdAW1TjCN57h1lbuuzvchg.gif"></Image>
+        <ImageWrapper>
+          <Image
+            src="https://media.tenor.com/IF2JdxzmyN4AAAAi/coding-girl.gif"
+            alt="workstation.2022-09-17 16_44_25.gif"
+            fetchpriority="low"
+            loading="lazy"
+            decoding="async"
+          />
+        </ImageWrapper>
       </IntroInner>
     </IntroWrapper>
   );

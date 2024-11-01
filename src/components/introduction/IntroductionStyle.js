@@ -2,12 +2,42 @@ import { styled } from "styled-components";
 import { colors, breakpoints } from "../../utils/theme";
 
 export const IntroductionWrapper = styled.div`
-  margin: 96px 0;
+  background-color: ${colors.darkSecondary};
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const IntroductionInner = styled.div`
-  display: flex;
-  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 24px;
+
+  @media screen and (${breakpoints.tablet}) {
+    padding: 0 70px;
+  }
+
+  @media screen and (${breakpoints.desktopSmall}) {
+    padding: 0 40px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  @media screen and (${breakpoints.desktop}) {
+    max-width: 1024px;
+  }
+`;
+
+export const StarCanvas = styled.canvas`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 `;
 
 export const TextWrapper = styled.div`
@@ -17,7 +47,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const IntroductionTitle = styled.h2`
-  font-size: 38px;
+  font-size: 58px;
 `;
 
 export const AccentText = styled.span`
@@ -39,9 +69,9 @@ export const LinkWrapper = styled.span`
   font-weight: 400;
 `;
 
-export const ImageWrapper = styled.div``;
+export const ImageWrapperD = styled.div``;
 
-export const Image = styled.img`
+export const ImageD = styled.img`
   width: 420px;
   height: 364px;
   object-fit: cover;

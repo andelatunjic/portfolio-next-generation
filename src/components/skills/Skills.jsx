@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { breakpoints } from "../../utils/theme";
 
 const SkillsWrapper = styled.div`
@@ -11,7 +9,7 @@ const SkillsWrapper = styled.div`
 const SkillsInner = styled.div``;
 
 // Individual card
-const Card = styled(motion.div)`
+const Card = styled.div`
   text-align: center;
   padding: 20px;
   border-radius: 10px;
@@ -81,29 +79,14 @@ const skillData = [
   },
 ];
 
-// Define slide-in animation
-const slideInVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
-
 const Skills = () => {
-  // Observer to detect when element is in view
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-
   return (
     <SkillsWrapper>
       <SkillsInner>
         <Title>The tools I use to build amazing apps</Title>
         <Grid>
           {skillData.map((section, index) => (
-            <Card
-              key={index}
-              ref={ref}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={slideInVariants}
-            >
+            <Card key={index}>
               <CardTitle>{section.title}</CardTitle>S
               {section.categories.map((category, i) => (
                 <div key={i}>

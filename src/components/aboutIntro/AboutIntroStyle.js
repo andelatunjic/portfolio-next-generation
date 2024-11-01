@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled, keyframes } from "styled-components";
 import { breakpoints } from "../../utils/theme";
 
 export const IntroWrapper = styled.div`
@@ -11,7 +11,9 @@ export const IntroInner = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 `;
 
 export const Title = styled.h2`
@@ -32,7 +34,10 @@ export const Description = styled.p`
   line-height: 22px;
 `;
 
+export const ImageWrapper = styled.div``;
+
 export const Image = styled.img`
-  height: 324px;
+  width: 420px;
+  height: 364px;
   object-fit: cover;
 `;
