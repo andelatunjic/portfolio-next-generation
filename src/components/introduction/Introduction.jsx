@@ -9,8 +9,6 @@ import {
   AccentText,
   IntroductionSubtitle,
   LinkWrapper,
-  ImageWrapperD,
-  ImageD,
 } from "./IntroductionStyle";
 
 const MovingIcons = () => {
@@ -33,10 +31,10 @@ const MovingIcons = () => {
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        speedY: 0.1 + Math.random() * 0.3, // Vertical falling speed
-        rotation: Math.random() * 360, // Initial random rotation angle
-        rotationSpeed: 0.02 * (Math.random() - 0.5), // Slow rotation
-        size: 30 + Math.random() * 40, // Random size
+        speedY: 0.1 + Math.random() * 0.3, 
+        rotation: Math.random() * 360, 
+        rotationSpeed: 0.02 * (Math.random() - 0.5), 
+        size: 30 + Math.random() * 40, 
       };
     };
 
@@ -46,7 +44,6 @@ const MovingIcons = () => {
         feather.y += feather.speedY;
         feather.rotation += feather.rotationSpeed;
 
-        // Reset feather to top if it falls out of the canvas
         if (feather.y > canvas.height) {
           feather.y = -feather.size;
           feather.x = Math.random() * canvas.width;
@@ -94,7 +91,6 @@ const MovingIcons = () => {
   return <StarCanvas ref={canvasRef} />;
 };
 
-// Introduction component with styled wrapper and canvas background
 const Introduction = () => {
   return (
     <IntroductionWrapper>
@@ -102,7 +98,8 @@ const Introduction = () => {
       <IntroductionInner>
         <TextWrapper>
           <IntroductionTitle>
-            Hi there, <br/> My name is Anđela and I'm a <AccentText>Frontend Developer</AccentText>
+            Hi there, <br /> My name is Anđela and I'm a{" "}
+            <AccentText>Frontend Developer</AccentText>
           </IntroductionTitle>
           <div>
             <IntroductionSubtitle>

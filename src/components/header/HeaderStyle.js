@@ -3,17 +3,19 @@ import { colors, breakpoints } from "../../utils/theme";
 import { NavLink } from "react-router-dom";
 
 export const HeaderWrapper = styled.header`
-  background-color: white;
+  background-color: ${colors.dark};
+  color: ${colors.text};
 `;
 
 export const HeaderInner = styled.div`
-  height: 120px;
+  height: 100px;
   padding: 0 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media screen and (${breakpoints.tablet}) {
+    height: 120px;
     padding: 0 70px;
   }
 
@@ -39,7 +41,13 @@ export const Logo = styled.h1`
   }
 `;
 
-export const Navigation = styled.nav``;
+export const Navigation = styled.nav`
+  display: none;
+
+  @media screen and (${breakpoints.tablet}) {
+    display: block;
+  }
+`;
 
 export const NavigationList = styled.ul`
   display: flex;

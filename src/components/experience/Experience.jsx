@@ -13,7 +13,7 @@ import experienceData from "../../data/experience";
 
 const Experience = () => {
   return (
-    <Section>
+    <Section background="secondary">
       <ExperienceWrapper>
         <ExperienceInner>
           <TextWrapper>

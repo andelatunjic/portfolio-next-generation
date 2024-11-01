@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { colors, breakpoints } from "../../utils/theme";
 
 export const SectionWrapper = styled.div`
-  /* background-color: ${colors.dark};
-  color: ${colors.text}; */
+  background-color: ${colors.dark};
+  color: ${colors.text};
 
   ${(props) =>
     props.background == "secondary" &&

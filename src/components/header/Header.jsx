@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   HeaderWrapper,
@@ -10,6 +10,8 @@ import {
   NaviagationLink,
   ResumeLink,
 } from "./HeaderStyle";
+import Sidebar from "../sidebar/Sidebar";
+import HamburgerButton from "../hamburgerButton/HamburgerButton";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -25,14 +27,18 @@ const Header = () => {
     }
   };
 
-  const handleResumeClick = () => {
-    window.open("../../assets/placeholder.pdf", "_blank");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <HeaderWrapper>
+      <Sidebar open={menuOpen} onClose={() => setMenuOpen(false)} />
       <HeaderInner>
         <Logo onClick={handleLogoClick}>Anđela Tunjić</Logo>
+        <HamburgerButton onClick={toggleMenu} open={menuOpen} />
         <Navigation>
           <NavigationList>
             <NaviagationItem>

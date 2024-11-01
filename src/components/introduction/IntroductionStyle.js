@@ -2,7 +2,8 @@ import { styled } from "styled-components";
 import { colors, breakpoints } from "../../utils/theme";
 
 export const IntroductionWrapper = styled.div`
-  background-color: ${colors.darkSecondary};
+  background-color: ${colors.dark};
+  color: ${colors.text};
   position: relative;
   overflow: hidden;
   height: 600px;
@@ -47,7 +48,11 @@ export const TextWrapper = styled.div`
 `;
 
 export const IntroductionTitle = styled.h2`
-  font-size: 58px;
+  font-size: 38px;
+
+  @media screen and (${breakpoints.desktopSmall}) {
+    font-size: 58px;
+  }
 `;
 
 export const AccentText = styled.span`
@@ -61,11 +66,11 @@ export const AccentText = styled.span`
 export const IntroductionSubtitle = styled.p`
   font-size: 18px;
   line-height: 32px;
-  color: #949494;
+  color: ${colors.text};
 `;
 
 export const LinkWrapper = styled.span`
-  color: #000;
+  color: ${colors.lightSecondary};
   font-weight: 400;
 `;
 
