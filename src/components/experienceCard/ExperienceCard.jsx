@@ -1,8 +1,10 @@
 import React from "react";
 import {
   ExperienceCardWrapper,
+  ImageWrapper,
   ExperienceCardFigure,
   ExperienceCardImage,
+  TextWrapper,
   ExperienceCardTitle,
   ExperienceCardSubtitle,
   ExperienceCardDescription,
@@ -11,12 +13,16 @@ import {
 const ExperienceCard = ({ title, role, description, img }) => {
   return (
     <ExperienceCardWrapper>
-      <ExperienceCardFigure>
-        <ExperienceCardImage alt={title} src={img} />
-      </ExperienceCardFigure>
-      <ExperienceCardTitle>{title}</ExperienceCardTitle>
-      <ExperienceCardSubtitle>{role}</ExperienceCardSubtitle>
-      <ExperienceCardDescription>{description}</ExperienceCardDescription>
+      <ImageWrapper>
+        <ExperienceCardFigure>
+          <ExperienceCardImage alt={title} src={img} />
+        </ExperienceCardFigure>
+      </ImageWrapper>
+      <TextWrapper>
+        <ExperienceCardTitle>{title}</ExperienceCardTitle>
+        <ExperienceCardSubtitle>{role}</ExperienceCardSubtitle>
+        <ExperienceCardDescription>{description}</ExperienceCardDescription>
+      </TextWrapper>
     </ExperienceCardWrapper>
   );
 };

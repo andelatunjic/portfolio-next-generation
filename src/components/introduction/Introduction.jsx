@@ -3,6 +3,7 @@ import Feather from "../../assets/feather.png";
 import {
   IntroductionWrapper,
   IntroductionInner,
+  Overlay,
   StarCanvas,
   TextWrapper,
   IntroductionTitle,
@@ -31,10 +32,10 @@ const MovingIcons = () => {
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        speedY: 0.1 + Math.random() * 0.3, 
-        rotation: Math.random() * 360, 
-        rotationSpeed: 0.02 * (Math.random() - 0.5), 
-        size: 30 + Math.random() * 40, 
+        speedY: 0.1 + Math.random() * 0.3,
+        rotation: Math.random() * 360,
+        rotationSpeed: 0.02 * (Math.random() - 0.5),
+        size: 30 + Math.random() * 40,
       };
     };
 
@@ -95,6 +96,7 @@ const Introduction = () => {
   return (
     <IntroductionWrapper>
       <MovingIcons />
+      <Overlay />
       <IntroductionInner>
         <TextWrapper>
           <IntroductionTitle>

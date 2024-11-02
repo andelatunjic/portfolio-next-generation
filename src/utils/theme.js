@@ -1,10 +1,11 @@
 export const colors = {
   dark: "#22223b",
+  darker: "#1e1e1e",
   darkSecondary: "#4a4e69",
   light: "#9a8c98",
   lightSecondary: "#c9ada7",
   text: "#f2e9e4",
-  textDark: "#0000",
+  textDark: "#000",
 };
 
 export const breakpoints = {

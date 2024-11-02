@@ -1,18 +1,26 @@
 import { styled } from "styled-components";
+import { colors, breakpoints } from "../../utils/theme";
 
 export const ExperienceCardWrapper = styled.div``;
 
+export const ImageWrapper = styled.div`
+  background-color: ${colors.text};
+`;
+
 export const ExperienceCardFigure = styled.figure`
   width: 100%;
-  height: 180px;
+  height: 220px;
   overflow: hidden;
-  margin-bottom: 12px;
 `;
 
 export const ExperienceCardImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+export const TextWrapper = styled.div`
+  margin: 12px;
 `;
 
 export const ExperienceCardTitle = styled.h3`
