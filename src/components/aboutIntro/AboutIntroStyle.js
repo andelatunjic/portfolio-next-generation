@@ -1,8 +1,12 @@
 import { styled, keyframes } from "styled-components";
-import { breakpoints } from "../../utils/theme";
+import { breakpoints, colors } from "../../utils/theme";
 
 export const IntroWrapper = styled.div`
-  padding: 64px 0;
+  padding: 32px 0;
+
+  @media screen and (${breakpoints.tablet}) {
+    padding: 64px 0;
+  }
 `;
 
 export const IntroInner = styled.div`
@@ -22,7 +26,11 @@ export const Title = styled.h2`
 `;
 
 export const AccentText = styled.span`
-  background: linear-gradient(90deg, #66cbef, #e8658f);
+  background: linear-gradient(
+    90deg,
+    ${colors.accentColor},
+    ${colors.accentColorSecodary}
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -34,7 +42,14 @@ export const Description = styled.p`
   line-height: 22px;
 `;
 
-export const ImageWrapper = styled.div``;
+export const ImageWrapper = styled.div`
+  display: none;
+
+  @media screen and (${breakpoints.tablet}) {
+    display: block;
+    padding: 64px 0;
+  }
+`;
 
 export const Image = styled.img`
   width: 420px;

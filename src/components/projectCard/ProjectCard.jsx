@@ -10,7 +10,6 @@ import {
   ImageOverlay,
   ProjectCardImage,
   ProjectCardTitle,
-  ProjectCardSubtitle,
   ProjectCardDescription,
   Tags,
 } from "./ProjectCardStyle";
@@ -43,7 +42,6 @@ const ProjectCard = ({ title, role, description, img, gallery, tags }) => {
           </ImageOverlay>
         </ImageWrapper>
         <ProjectCardTitle>{title}</ProjectCardTitle>
-        <ProjectCardSubtitle>{role}</ProjectCardSubtitle>
         <ProjectCardDescription>{description}</ProjectCardDescription>
         <Tags>
           {tags.map((tag, index) => (

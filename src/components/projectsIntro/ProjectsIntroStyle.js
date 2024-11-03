@@ -1,24 +1,36 @@
 import { styled } from "styled-components";
-import { breakpoints } from "../../utils/theme";
+import { breakpoints, colors } from "../../utils/theme";
 
 export const ProjectsWrapper = styled.div``;
 
 export const ProjectsInner = styled.div`
-  margin: 64px 0;
+  margin: 32px 0;
+
+  @media screen and (${breakpoints.tablet}) {
+    margin: 64px 0;
+  }
 `;
 
 export const TextWrapper = styled.div`
   max-width: 600px;
-  margin-bottom: 44px;
+  margin-bottom: 32px;
 `;
 
 export const Title = styled.h2`
-  line-height: 38px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  font-size: 24px;
+
+  @media screen and (${breakpoints.tablet}) {
+    font-size: 32px;
+  }
 `;
 
 export const AccentText = styled.span`
-  background: linear-gradient(90deg, #66cbef, #e8658f);
+  background: linear-gradient(
+    90deg,
+    ${colors.accentColor},
+    ${colors.accentColorSecodary}
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -42,16 +54,4 @@ export const Grid = styled.div`
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-`;
-
-export const Figure = styled.figure`
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-`;
-
-export const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 `;

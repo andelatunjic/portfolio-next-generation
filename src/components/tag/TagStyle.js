@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { breakpoints, colors } from "../../utils/theme";
 
 export const TagWrapper = styled.div`
-  background-color: #cdd4df;
-  padding: 4px 6px;
-  border-radius: 4px;
+  background-color: ${colors.text};
+  padding: 6px 12px;
+  border-radius: 24px;
 `;
 
 export const TagText = styled.div`

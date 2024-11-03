@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import ProjectCard from "../projectCard/ProjectCard";
 import {
   ProjectsWrapper,

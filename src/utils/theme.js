@@ -6,6 +6,8 @@ export const colors = {
   lightSecondary: "#c9ada7",
   text: "#f2e9e4",
   textDark: "#000",
+  accentColor: "#66cbef",
+  accentColorSecodary: "#e8658f",
 };
 
 export const breakpoints = {

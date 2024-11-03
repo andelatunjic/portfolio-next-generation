@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
-
-export const ProjectCardWrapper = styled.div``;
+import { breakpoints, colors } from "../../utils/theme";
 
 export const ImageOverlay = styled.div`
   position: absolute;
@@ -24,15 +23,11 @@ export const Button = styled.button`
   gap: 4px;
   padding: 8px 8px;
   font-size: 12px;
-  color: #cdd4df;
-  background-color: rgb(0, 0, 0, 0.6);
+  color: ${colors.text};
+  background-color: rgb(0, 0, 0, 0.5);
   border: none;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-
-  &:hover {
-    background-color: rgb(0, 0, 0, 0.9);
-  }
 `;
 
 export const Icon = styled.img`
@@ -54,21 +49,36 @@ export const ProjectCardImage = styled.img`
 `;
 
 export const ProjectCardTitle = styled.h3`
-  font-weight: 400;
-`;
-
-export const ProjectCardSubtitle = styled.p`
-  opacity: 0.5;
-  line-height: 32px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: ${colors.lightSecondary};
+  transition: 0.3s ease-in-out;
 `;
 
 export const ProjectCardDescription = styled.p`
   line-height: 22px;
-  margin-bottom: 4px;
+  font-size: 16px;
+  margin-bottom: 8px;
 `;
 
 export const Tags = styled.div`
   display: flex;
   gap: 8px;
   margin-bottom: 12px;
+`;
+
+export const ProjectCardWrapper = styled.div`
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    ${Button} {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    ${ProjectCardTitle} {
+      color: ${colors.accentColorSecodary};
+    }
+  }
 `;
