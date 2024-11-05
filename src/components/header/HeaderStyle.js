@@ -30,11 +30,10 @@ export const HeaderInner = styled.div`
   }
 `;
 
-export const Logo = styled.h1`
-  font-size: 22px;
-  font-weight: 500;
+export const Logo = styled.img`
   transition: opacity 0.4s ease-in-out;
   cursor: pointer;
+  height: 60px;
 
   &:hover {
     opacity: 0.5;

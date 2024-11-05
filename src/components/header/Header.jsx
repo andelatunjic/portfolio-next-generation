@@ -12,6 +12,7 @@ import {
 } from "./HeaderStyle";
 import Sidebar from "../sidebar/Sidebar";
 import HamburgerButton from "../hamburgerButton/HamburgerButton";
+import LogoImage from "../../assets/logo.png";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ const Header = () => {
     <HeaderWrapper>
       <Sidebar open={menuOpen} onClose={() => setMenuOpen(false)} />
       <HeaderInner>
-        <Logo onClick={handleLogoClick}>Anđela Tunjić</Logo>
+        <Logo src={LogoImage} onClick={handleLogoClick} />
         <HamburgerButton onClick={toggleMenu} open={menuOpen} />
         <Navigation>
           <NavigationList>
